@@ -1,0 +1,137 @@
+/**
+ * Rofi Spotlight-style Theme (Gruvbox Pastel)
+ * By: Adi
+ */
+
+* {
+  font: "JetBrains Mono 12";
+
+  background:        #282828;
+  background-alt:    #3c3836;
+  background-dark:   #1d2021;
+  background-soft:   #32302f;
+
+  foreground:        #ebdbb2;
+  foreground-alt:    #d5c4a1;
+  foreground-soft:   #bdae93;
+  foreground-faint:  #a89984;
+
+  red:               #cc241d;
+  green:             #98971a;
+  yellow:            #d79921;
+  blue:              #458588;
+  purple:            #b16286;
+  aqua:              #689d6a;
+  orange:            #d65d0e;
+
+  bright-red:        #fb4934;
+  bright-green:      #b8bb26;
+  bright-yellow:     #fabd2f;
+  bright-blue:       #83a598;
+  bright-purple:     #d3869b;
+  bright-aqua:       #8ec07c;
+  bright-orange:     #fe8019;
+
+  gray:              #928374;
+  gray-light:        #a89984;
+  gray-dark:         #665c54;
+
+  text-color:        @foreground;
+  background-color:  #1d2021cc;
+  border-radius:     10px;
+  spacing:           8px;
+}
+
+configuration {
+  display-drun: "   Apps ";
+  display-run: "   Run ";
+  display-window: "   Windows ";
+  show-icons: true;
+  icon-theme: "Papirus-Dark";
+}
+
+window {
+  width: 40%;
+  location: center;
+  border: 0px;
+  border-radius: 14px;
+  padding: 10px;
+  background-color: @background-color;
+}
+
+mainbox {
+  padding: 12px;
+  children: [inputbar, listview];
+}
+
+inputbar {
+  background-color: @yellow;
+  border-radius: 10px;
+  margin: 5px 10px;
+  children: [prompt, entry];
+}
+
+prompt {
+  padding: 6px 10px;
+  text-color: @background-dark;
+  background-color: @yellow;
+  font: "JetBrains Mono Bold 13";
+}
+
+entry {
+  padding: 6px 10px;
+  text-color: @red;
+  background-color: @background-dark;
+  font: "JetBrains Mono Bold 13";
+  border: 1px;
+  border-color: @gray;
+  border-radius: 6px;
+}
+
+listview {
+  lines: 8;
+  margin: 10px;
+  padding: 6px;
+  background-color: @background-alt;
+  border: 1px;
+  border-color: @gray-dark;
+  border-radius: 10px;
+  children: [element];
+}
+
+element {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+element selected {
+  background-color: @bright-yellow;
+  text-color: @background-dark;
+}
+
+element selected active {
+  background-color: @bright-red;
+  text-color: @background;
+}
+
+element-text {
+  text-color: inherit;
+  font: "JetBrains Mono 12";
+  padding: 6px;
+}
+
+element-icon {
+  size: 1.2em;
+  margin: 0px 8px;
+}
+
+message,
+error-message,
+textbox {
+  expand: true;
+  padding: 6px;
+  background-color: @red;
+  text-color: @background;
+  border-radius: 6px;
+}
+
